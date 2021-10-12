@@ -11,7 +11,6 @@ nums();
 
 // Using a while loop, return an array that contains all odd numbers between 3 and 103
 
-let normArray = []
 function normArray() {
   let oddArray = []
   let i = 2;
@@ -20,11 +19,9 @@ function normArray() {
     i++;
 
     if (i % 2 !== 0) {
-      normArray.push(i);
       oddArray.push(i);
     }
   }
-  console.log(normArray);
   console.log(oddArray);
 }
 normArray();
@@ -34,14 +31,13 @@ normArray();
 // arraySum(num) receives an array of numbers as an argument and returns the sum of all numbers, 
 // for example: arraySum([1, 2, 3, 4, 5, 6]) => 21, use any loop.
 
-function arraySum(num) {
-  numbers = numbers * num[i];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let sum = 0;
 
+for (let i = 0; i < array.length; i++) {
+  sum += array[i];
 }
-console.log(numbers);
-console.log(`The total sum of all the numbers is ${numbers}`);
-
-arraySum([3, 18, 6, 65]);
+console.log(`The total sum of all the numbers is ${sum}`);
 
 
 
@@ -58,20 +54,31 @@ console.log(descendingOrder());
 
 // Write a function computing the factorial of n
 
-function arraySum(num) {
-  n = n * i;
+function factorial(n) {
+  let answer = 1;
+  if (n == 0 || n == 1) {
+    return answer;
+  } else {
+    for (var i = n; i >= 1; i--) {
+      answer = answer * i;
+    }
+    return answer;
+  }
 }
-return `the solution is ${n}`
+let n = 9;
+answer = factorial(n)
+console.log(`The factorial of ${n} is ${answer}`);
 
 
 
 // Write a function using a for loop that returns the sum of all numbers from 1 to n.
 
-function arraySum(num) {
-  for (i = 0; i <= n; i++) {
-    sum = sum + i;
+function numberSum(N) {
+  var total = 0;
+  for (var i = 1; i <= N; i++) {
+    total += i;
   }
-  console.log(`The sum of n= ${sum}`);
+  return total;
 }
 
 
@@ -81,13 +88,16 @@ function arraySum(num) {
 // Let string = “donuts”
 // Expected output => dZnZtZ
 
-sumNumbers(20);
-function arraySum(num) {
-  return newV;
+function toWeirdCase(getString) {
+  var returned = '';
+  for (var i = 0; i < getString.length; i++) {
+    var method = i % 2 === 0 ? 'toUpperCase' : 'toLowerCase';
+    returned += getString[i][method]();
+  }
+  return returned;
 }
 
-console.log(changeLetters("Donuts"));
-console.log(changeLetters("Icecream"));
+console.log(toWeirdCase('Looks'));
 
 
 
